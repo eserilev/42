@@ -1,0 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_list_push_params.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eseri-le <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/24 18:09:36 by eseri-le          #+#    #+#             */
+/*   Updated: 2016/08/24 18:09:37 by eseri-le         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_list.h"
+#include <stdlib.h>
+
+t_list	*ft_create_elem(void *data)
+
+t_list	*add_link(t_list *list, void *data)
+{
+	t_list *tmp;
+
+	tmp = ft_create_elem(data);
+	if (list)
+		tmp->next = list;
+	return (tmp);
+}
+
+t_list	*ft_list_push_params(int ac, char **av)
+{
+	t_list	*list;
+	int		i;
+
+	i = 2;
+	if (ac < 2)
+		return (NULL);
+	list = ft_create_elem(av[1]);
+	while (i < ac)
+	{
+		list = add_link(list, av[i]);
+		i++;
+	}
+	return (list);
+}

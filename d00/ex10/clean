@@ -1,0 +1,1 @@
+find test -name "#*" -print -exec rm {} +  -or -name "*#" -print -exec rm {} +  -or -name "*~" -print -exec rm {} +

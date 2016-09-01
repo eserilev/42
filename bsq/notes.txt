@@ -1,0 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    notes.txt                                          :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: eseri-le <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2016/08/30 21:19:17 by eseri-le          #+#    #+#              #
+#    Updated: 2016/08/30 21:19:19 by eseri-le         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+-program currently takes in file input and converts it to a 2d array using a linked list.
+-in ft_concat_list (last function in the file ft_linked_list.c) is where the string concat occurs
+	-see line 93, if you uncomment that line of code the 2d char array will be allocated without the header.
+
+-having issues implementing the actual logic, see bsq.c
+	-find_largest_square is a recursive function that should always test for the next max value.
+	-if the next max square value is not possible, it'll return max - 1;
+	-if the next max value is possible, it sets our global variables, max_row, and max_column and recursively calls itself to try the next max value. 
+	-it'll never check for the same max value, which should guarantee that we always return the max value closest to the top left corner.
+	-max always starts at 1 if map[0][0] = '.'
+		else max starts at 0
+
+ill try to be up here tomorrow at around 12, but i have a skype session with my boss so it might take me longer to make it up here.
